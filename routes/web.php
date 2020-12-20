@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DosenController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,13 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('halo', function () {
+    return "Halo, selamat datang di tutorial laravel www.malasngoding.com";
+});
+
+Route::get('blog', function() {
+    return view('blog');
+});
+
+Route::get('dosen', [DosenController::class, 'index']);
